@@ -4,11 +4,7 @@
 
   - name: import common file
     import_playbook: ../static-assignments/common.yml
-    tags:
-      - always
-
-  - name: include env-vars file
-    import_playbook: ../dynamic-assignments/env-vars.yml
+    include: ../dynamic-assignments/env-vars.yml
     tags:
       - always
   
