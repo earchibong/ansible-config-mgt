@@ -15,6 +15,7 @@
   with_items: "{{ apache_vhosts_ssl }}"
 
 - name: Enable Apache mods.
+  become: true
   copy:
     dest: "{{ apache_server_root }}/conf.modules.d/99-ansible-{{ item }}.conf"
     content: |
@@ -24,6 +25,7 @@
   notify: restart apache
 
 - name: Disable Apache mods
+  become: true
   file:
     path: "{{ apache_server_root }}/conf.modules.d/99-ansible-{{ item }}.conf"
     state: absent
@@ -31,6 +33,7 @@
   notify: restart apache
 
 - name: Add apache vhosts configuration.
+  become: true
   template:
     src: "{{ apache_vhosts_template }}"
     dest: "{{ apache_conf_path }}/{{ apache_vhosts_filename }}"
