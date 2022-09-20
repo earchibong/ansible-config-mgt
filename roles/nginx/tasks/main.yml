@@ -39,19 +39,17 @@
   loop:
     - { name: web1, ip: 172.31.39.105 }
     - { name: web2, ip: 172.31.35.5 }
-    
 
-# Nginx setup.
+# Nginx setup. 
 - name: Copy nginx configuration in place.
   become: true
   template:
-    src: "{{ nginx_conf_template }}"
-    dest: "{{ nginx_conf_file_path }}"
+    src:  "nginx.conf.j2"
+    dest: "/etc/nginx/nginx.conf"
     owner: root
     group: "{{ root_group }}"
     mode: 0644
-  notify:
-    - reload nginx
+  notify: reload nginx
 
 - name: Ensure nginx service is running as configured.
   become: true
