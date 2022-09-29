@@ -1,12 +1,12 @@
 ---
 
 - hosts: db
- - name: database assignment
-   ansible.builtin.import_playbook: ../static-assignments/database.yml
+- name: database assignment
+  ansible.builtin.import_playbook: ../static-assignments/database.yml
 
 - hosts: nginx
- - name: nginx assignment
-   ansible.builtin.import_playbook: ../static-assignments/nginx.yml
+- name: nginx assignment
+  ansible.builtin.import_playbook: ../static-assignments/nginx.yml
 
   #- hosts: all
   #- name: include dynamic variables
