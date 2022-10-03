@@ -1,8 +1,8 @@
 [nginx]
-172.31.9.197 ansible_ssh_user='ec2-user'
+13.40.174.59 ansible_ssh_user='ec2-user'
 
 [db]
-172.31.4.7 ansible_ssh_user='ubuntu' 
+18.130.85.157 ansible_ssh_user='ubuntu' 
 
 
 #[nfs]
