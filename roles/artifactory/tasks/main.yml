@@ -45,9 +45,9 @@
     name: jfrog-artifactory-oss
     state: present
 
-- name: start and enable artifactory
+- name: Start and enable artifactory
   ansible.builtin.service:
     name: artifactory
     state: started
     enabled: yes
-Footer
+#Footer
