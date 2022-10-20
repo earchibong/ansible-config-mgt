@@ -1,8 +1,8 @@
 ---
 
- - hosts: artifactory
- - name: artifactory assignment
-   ansible.builtin.import_playbook: ../static-assignments/artifactory.yml
+ #- hosts: artifactory
+ #- name: artifactory assignment
+  # ansible.builtin.import_playbook: ../static-assignments/artifactory.yml
 
 - hosts: db
 - name: database assignment
