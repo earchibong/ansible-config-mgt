@@ -1,0 +1,10 @@
+---
+sonar_user:     sonar
+sonar_version:  8.9.0.43852
+
+# DDBB Config
+sonar_jdbc_username: sonar
+sonar_jdbc_password: sonar
+sonar_jdbc_host:     localhost
+sonar_jdbc_port:     5432
+sonar_jdbc_ddbb:     sonardb
