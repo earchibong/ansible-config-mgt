@@ -1,5 +1,5 @@
 [jenkins]
-<Jenkins-Private-IP-Address>
+172.31.39.236 ansible_ssh_user='ec2-user'
 
 [nginx]
 172.31.9.197 ansible_ssh_user='ec2-user'
